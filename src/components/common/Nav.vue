@@ -4,7 +4,7 @@
       <h1 class="jet_brains_font">theQuery</h1>
       <ul>
         <li>DataPool</li>
-        <li>Random</li>
+        <li @click="$router.push({ name: 'RandomList' })">Random</li>
         <li>Blog</li>
       </ul>
     </div>
