@@ -22,7 +22,7 @@ export default (property:any) => {
     }
 
     interface pendingType {
-        [key: string]: string[] | boolean;
+        [key: string]: boolean;
     }
 
     let pending_get : pendingType

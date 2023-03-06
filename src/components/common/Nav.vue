@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="logo">
-      <h1 class="jet_brains_font">theQuery</h1>
+      <h1 class="jet_brains_font" @click="$router.push({ name: 'Main' })">theQuery</h1>
       <ul>
         <li>DataPool</li>
         <li @click="$router.push({ name: 'RandomList' })">Random</li>
@@ -12,7 +12,7 @@
       <input type="text" class="mr-6 border pa-2 rounded-lg" placeholder="키워드 검색">
       <v-avatar color="surface-variant" class="mr-3"></v-avatar>
       <v-avatar icon="mdi-vuetify" color="surface-variant" class="mr-3"></v-avatar>
-      <v-avatar color="surface-variant"></v-avatar>
+      <v-avatar color="surface-variant" class="cursor" @click="$router.push({ name : 'Mypage' })"></v-avatar>
     </div>
   </div>
 </template>
@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style scoped>
+.cursor{
+  cursor: pointer;
+}
 .nav {
   width: 100%;
   /*position: fixed;*/
