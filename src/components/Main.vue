@@ -227,9 +227,24 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
+<script>
+import {defineComponent} from "vue";
 
+export default defineComponent({
+  name: "Main",
+
+  props: ['setNav'],
+
+  data(){
+     return {
+
+     }
+  },
+
+  mounted() {
+    this.setNav('LOGIN')
+  }
+})
 </script>
 
 <style scoped>

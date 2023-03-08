@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div>
     <div>
       <div class="d-flex justify-sm-space-between">
         <p class="font-weight-bold text-sm-h6 ma-4 mb-3">My data</p>
@@ -17,7 +17,7 @@
     <div>
 <!--      <calendar-heatmap :values="[{ date: '2018-9-22', count: 6 }]"/>-->
     </div>
-  </v-container>
+  </div>
 </template>
 
 <script>

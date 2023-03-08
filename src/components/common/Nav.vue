@@ -8,19 +8,37 @@
         <li>Blog</li>
       </ul>
     </div>
-    <div>
+    <div v-show="btn === 'LOGIN'">
       <input type="text" class="mr-6 border pa-2 rounded-lg" placeholder="키워드 검색">
       <v-avatar color="surface-variant" class="mr-3"></v-avatar>
       <v-avatar icon="mdi-vuetify" color="surface-variant" class="mr-3"></v-avatar>
       <v-avatar color="surface-variant" class="cursor" @click="$router.push({ name : 'Mypage' })"></v-avatar>
     </div>
+    <div class="logo" v-show="btn === 'JOIN'">
+      <ul>
+        <li>Sing In</li>
+        <li>Login</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: "Nav"
-}
+import {defineComponent} from "vue";
+
+export default defineComponent({
+  name: "Nav",
+  data() {
+    return {
+      btn: '',
+    }
+  },
+  methods: {
+    setNav(btn) {
+      this.btn = btn
+    }
+  }
+})
 </script>
 
 <style scoped>
