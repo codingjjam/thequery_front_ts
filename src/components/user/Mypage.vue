@@ -11,7 +11,7 @@
 
         </div>
         <div class="profile_text">
-          <p>
+          <p class="text-sm-body-2">
             안녕하세요. 소개글은 이렇게 써주세요.<br>
             안녕하세요. 소개글은 이렇게 이렇게 3줄<br>
             까지 노출해 주세요.
@@ -25,52 +25,43 @@
       </div>
       <div class="profile">
         <div>
-          <p>My Data</p>
+          <p class="text-grey text-sm-body-2 mb-3">My Data</p>
         </div>
         <div>
-          <p>푼 문제</p>
+          <p class="text-grey text-sm-body-2 mb-3">푼 문제</p>
         </div>
         <div>
-          <p>저장한 문제</p>
+          <p class="text-grey text-sm-body-2 mb-3">저장한 문제</p>
         </div>
         <div>
-          <p>미해결 문제</p>
+          <p class="text-grey text-sm-body-2">미해결 문제</p>
         </div>
       </div>
       <div class="profile">
-        <p>직업/역할</p>
+        <p class="text-grey-lighten-1 text-sm-body-2 mb-1">직업/역할</p>
         <div>
-          <p>데이터 사이언티스트, 데이터 분석가</p>
+          <p class="text-sm-body-2 mb-3">데이터 사이언티스트, 데이터 분석가</p>
         </div>
-        <p>링크</p>
+        <p class="text-grey-lighten-1 text-sm-body-2 mb-1">링크</p>
         <div>
-          <p>www.nadindind.com</p>
+          <p class="text-sm-body-2">www.nadindind.com</p>
         </div>
 
       </div>
     </div>
-<!--    <div class="right_item">-->
-<!--      <div>-->
-<!--        <div class="d-flex justify-sm-space-between">-->
-<!--          <p class="font-weight-bold text-sm-h6 mt-1">My data</p>-->
-<!--          <select class="select_box">-->
-<!--            <option>최신순</option>-->
-<!--          </select>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <p>아직 업로드한 데이터가 없네요.</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div>-->
-<!--        <p class="font-weight-bold text-sm-h6 mt-1">활동</p>-->
-<!--      </div>-->
-<!--    </div>-->
+    <div class="right_item">
+      <MyData />
+    </div>
   </div>
 </template>
 
 <script>
+import MyData from "./contents/MyData.vue";
 export default {
-  name: "Mypage"
+  name: "Mypage",
+  components: {
+    MyData
+  }
 }
 </script>
 
@@ -91,5 +82,11 @@ export default {
 .profile_text p{
   margin-top: 20px;
   font-size: 14px;
+}
+.left_item {
+  width: 35%;
+}
+.right_item {
+  width: 65%;
 }
 </style>
