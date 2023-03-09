@@ -7,6 +7,11 @@ const routes = [
         component: () => import('../components/Main.vue')
     },
     {
+        path: '/login',
+        name:'Login',
+        component: () => import('../components/Login.vue')
+    },
+    {
         path: '/random/list',
         name:'RandomList',
         component: () => import('../components/random/RandomList.vue')

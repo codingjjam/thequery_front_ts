@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav" v-show="btn !== 'NONE'">
     <div class="logo">
       <h1 class="jet_brains_font" @click="$router.push({ name: 'Main' })">theQuery</h1>
       <ul>
@@ -17,7 +17,7 @@
     <div class="logo" v-show="btn === 'JOIN'">
       <ul>
         <li>Sing In</li>
-        <li>Login</li>
+        <li @click="$router.push({ name : 'Login' })">Login</li>
       </ul>
     </div>
   </div>
